@@ -1,4 +1,3 @@
-Attribute VB_Name = "Module1"
 Sub Stock()
         'Create Variable to hold Value
         Dim OpenPrice As Double
@@ -22,10 +21,10 @@ Sub Stock()
 
         'Set Initial Open Price
         OpenPrice = Cells(2, SumTable + 2).Value
-         ' Loop through all ticker symbol
         
+		' Loop through all ticker symbol   
         For i = 2 To LastRow
-         ' Check if we are still within the same ticker (Part 1)
+			' Check if we are still within the same ticker (Part 1)
             If Cells(i + 1, SumTable).Value <> Cells(i, SumTable).Value Then
                 ' Set Ticker name
                 Ticker = Cells(i, SumTable).Value
@@ -71,6 +70,7 @@ Sub StockChallenge()
         Dim WS As Worksheet
         For Each WS In ActiveWorkbook.Worksheets
         WS.Activate
+
         'Create Variable to hold Value
         Dim OpenPrice As Double
         Dim ClosePrice As Double
@@ -93,10 +93,11 @@ Sub StockChallenge()
 
         'Set Initial Open Price
         OpenPrice = Cells(2, SumTable + 2).Value
-         ' Loop through all ticker symbol
         
+		' Loop through all ticker symbol
         For i = 2 To LastRow
-         ' Check if we are still within the same ticker (Part 1)
+        
+		' Check if we are still within the same ticker (Part 1)
             If Cells(i + 1, SumTable).Value <> Cells(i, SumTable).Value Then
                 ' Set Ticker name
                 Ticker = Cells(i, SumTable).Value
